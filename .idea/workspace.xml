@@ -4,13 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc43189e-a648-4f9f-bd6b-e428ee62b079" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="bc43189e-a648-4f9f-bd6b-e428ee62b079" name="Changes" comment="structure">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/controller/RationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/controller/RationFoodController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/model/Ration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/model/RationFood.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/repository/RationFoodRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/repository/RationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/service/RationFoodService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/service/RationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodsmile/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +62,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "android.gradle.sync.needed": "true",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -63,6 +77,19 @@
       <option name="presentableId" value="Default" />
       <updated>1697133661037</updated>
     </task>
+    <task id="LOCAL-00001" summary="structure">
+      <option name="closed" value="true" />
+      <created>1697136018597</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697136018597</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="structure" />
   </component>
 </project>
