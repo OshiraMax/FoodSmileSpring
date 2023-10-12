@@ -2,8 +2,10 @@ package com.foodsmile.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
+
+import com.foodsmile.model.User;
+import com.foodsmile.service.UserService;
 
 @RestController
 @RequestMapping("/users")

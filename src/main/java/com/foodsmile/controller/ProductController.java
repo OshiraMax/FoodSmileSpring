@@ -2,8 +2,10 @@ package com.foodsmile.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
+
+import com.foodsmile.model.Product;
+import com.foodsmile.service.ProductService;
 
 @RestController
 @RequestMapping("/api/products")

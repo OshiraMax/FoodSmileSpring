@@ -2,8 +2,10 @@ package com.foodsmile.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
+
+import com.foodsmile.model.Product;
+import com.foodsmile.repository.ProductRepository;
 
 @Service
 public class ProductService {
