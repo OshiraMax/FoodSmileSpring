@@ -1,12 +1,15 @@
 package com.foodsmile.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 import com.foodsmile.model.User;
 import com.foodsmile.service.UserService;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -24,8 +27,8 @@ public class UserController {
         return service.getUserById(id);
     }
 
-    @PostMapping
-    public User createUser(@RequestBody User user) {
+    @PostMapping("/register")
+    public User registerUser(@RequestBody User user) {
         return service.createUser(user);
     }
 
@@ -38,5 +41,15 @@ public class UserController {
     @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable Integer id) {
         service.deleteUser(id);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> loginUser(@RequestBody User user) {
+        User authenticatedUser = service.authenticateUser(user.getEmail(), user.getPasswordHash());
+        if (authenticatedUser != null) {
+            return new ResponseEntity<>(authenticatedUser, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>("Authentication failed", HttpStatus.UNAUTHORIZED);
+        }
     }
 }
