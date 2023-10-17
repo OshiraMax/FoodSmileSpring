@@ -28,8 +28,13 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public User registerUser(@RequestBody User user) {
-        return service.createUser(user);
+    public ResponseEntity<?> registerUser(@RequestBody User user) {
+        User existingUser = service.findByEmail(user.getEmail());
+        if (existingUser != null) {
+            return new ResponseEntity<>("Email already exists", HttpStatus.CONFLICT);
+        }
+        User createdUser = service.createUser(user);
+        return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")

@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc43189e-a648-4f9f-bd6b-e428ee62b079" name="Changes" comment="fixed class problem">
+    <list default="true" id="bc43189e-a648-4f9f-bd6b-e428ee62b079" name="Changes" comment="authentication creating in progress">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/foodsmile/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/foodsmile/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodsmile/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodsmile/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/foodsmile/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +86,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697150009941</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="authentication creating in progress">
+      <option name="closed" value="true" />
+      <created>1697482992367</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697482992367</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +112,7 @@
     <MESSAGE value="structure" />
     <MESSAGE value="add all files to connect to database" />
     <MESSAGE value="fixed class problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed class problem" />
+    <MESSAGE value="authentication creating in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="authentication creating in progress" />
   </component>
 </project>

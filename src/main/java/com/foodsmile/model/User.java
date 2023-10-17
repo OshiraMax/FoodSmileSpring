@@ -1,9 +1,13 @@
 package com.foodsmile.model;
 
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
+@EntityListeners(AuditingEntityListener.class)
 public class User {
 
     @Id
@@ -12,7 +16,9 @@ public class User {
     private String username;
     private String email;
     private String passwordHash;
+    @CreatedDate
     private Timestamp createdAt;
+    @LastModifiedDate
     private Timestamp updatedAt;
 
     public Integer getUserId() {
