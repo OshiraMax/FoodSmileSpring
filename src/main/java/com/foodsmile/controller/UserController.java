@@ -1,13 +1,17 @@
 package com.foodsmile.controller;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.List;
 
 import com.foodsmile.model.User;
 import com.foodsmile.service.UserService;
+import com.foodsmile.util.JwtUtil;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -52,7 +56,11 @@ public class UserController {
     public ResponseEntity<?> loginUser(@RequestBody User user) {
         User authenticatedUser = service.authenticateUser(user.getEmail(), user.getPasswordHash());
         if (authenticatedUser != null) {
-            return new ResponseEntity<>(authenticatedUser, HttpStatus.OK);
+            String token = JwtUtil.generateToken(authenticatedUser);
+            Map<String, Object> response = new HashMap<>();
+            response.put("user", authenticatedUser);
+            response.put("token", token);
+            return new ResponseEntity<>(response, HttpStatus.OK);
         } else {
             return new ResponseEntity<>("Authentication failed", HttpStatus.UNAUTHORIZED);
         }

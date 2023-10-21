@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc43189e-a648-4f9f-bd6b-e428ee62b079" name="Changes" comment="authentication creating in progress">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bc43189e-a648-4f9f-bd6b-e428ee62b079" name="Changes" comment="authentication creating in progress v2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/util/JwtUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodsmile/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/foodsmile/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/foodsmile/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/foodsmile/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodsmile/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +54,26 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.foodsmile.Application" />
+      <module name="FoodSmileSpring.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.foodsmile.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -94,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697482992367</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="authentication creating in progress v2">
+      <option name="closed" value="true" />
+      <created>1697563959334</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697563959334</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +142,7 @@
     <MESSAGE value="add all files to connect to database" />
     <MESSAGE value="fixed class problem" />
     <MESSAGE value="authentication creating in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="authentication creating in progress" />
+    <MESSAGE value="authentication creating in progress v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="authentication creating in progress v2" />
   </component>
 </project>

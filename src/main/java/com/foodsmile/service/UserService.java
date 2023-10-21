@@ -1,18 +1,19 @@
 package com.foodsmile.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import java.util.List;
 
 import com.foodsmile.model.User;
 import com.foodsmile.repository.UserRepository;
-
 @Service
 public class UserService {
 
     @Autowired
     private UserRepository repository;
+    private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
     public List<User> getAllUsers() {
         return repository.findAll();
@@ -29,8 +30,6 @@ public class UserService {
     public void deleteUser(Integer id) {
         repository.deleteById(id);
     }
-
-    private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
     public User createUser(User user) {
         String hashedPassword = encoder.encode(user.getPasswordHash());
