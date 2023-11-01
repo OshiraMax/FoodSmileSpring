@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.foodsmile.model.User;
 import com.foodsmile.repository.UserRepository;
 @Service
@@ -14,9 +17,13 @@ public class UserService {
     @Autowired
     private UserRepository repository;
     private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
     public List<User> getAllUsers() {
-        return repository.findAll();
+        logger.info("Getting all users");
+        List<User> users = repository.findAll();
+        logger.info("Found {} users", users.size());
+        return users;
     }
 
     public User getUserById(Integer id) {

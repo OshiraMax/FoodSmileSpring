@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.foodsmile.model.User;
 import com.foodsmile.service.UserService;
@@ -21,6 +23,8 @@ public class UserController {
     @Autowired
     private UserService service;
 
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
     @GetMapping
     public List<User> getAllUsers() {
         return service.getAllUsers();
@@ -33,12 +37,15 @@ public class UserController {
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody User user) {
+        logger.info("Registering user with email: {}", user.getEmail());
         User existingUser = service.findByEmail(user.getEmail());
         if (existingUser != null) {
+            logger.warn("Email already exists: {}", user.getEmail());
             return new ResponseEntity<>("Email already exists", HttpStatus.CONFLICT);
         }
         User createdUser = service.createUser(user);
-        return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
+        logger.info("User registered successfully: {}", createdUser.getUserId());
+        return new ResponseEntity<>("User registered successfully", HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
@@ -60,8 +67,10 @@ public class UserController {
             Map<String, Object> response = new HashMap<>();
             response.put("user", authenticatedUser);
             response.put("token", token);
+            logger.info("User logged in: {} ", authenticatedUser );
             return new ResponseEntity<>(response, HttpStatus.OK);
         } else {
+            logger.info("Authentication failed: {} ", user.getEmail() );
             return new ResponseEntity<>("Authentication failed", HttpStatus.UNAUTHORIZED);
         }
     }

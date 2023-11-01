@@ -8,7 +8,7 @@ import com.foodsmile.model.Product;
 import com.foodsmile.service.ProductService;
 
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/products")
 public class ProductController {
 
     @Autowired
